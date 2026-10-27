@@ -1,0 +1,20 @@
+{
+  "name": "@stackray/site",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Landing page. A placeholder until the demo is built.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5174",
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@stackray/ui": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "vite": "^8.3.5"
+  }
+}

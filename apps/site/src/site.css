@@ -1,0 +1,21 @@
+@import "@stackray/ui/fonts.css";
+@import "@stackray/ui/tokens.css";
+
+body {
+  margin: 0;
+  background: var(--sr-cream);
+  color: var(--sr-ink);
+  font-family: var(--sr-font-mono);
+}
+
+main {
+  max-width: 60ch;
+  margin: 10vh auto;
+  padding: 0 var(--sr-space-4);
+}
+
+h1 {
+  font-family: var(--sr-font-display);
+  font-weight: 400;
+  font-size: var(--sr-text-display);
+}
