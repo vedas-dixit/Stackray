@@ -1,0 +1,76 @@
+/**
+ * The pixel rocker switch from vedasdixit.com's "My ToolKit" card, redrawn as
+ * inline SVG in `currentColor`. The bezel is shared; the lever flips.
+ */
+
+const BEZEL = [
+  'M32.8501 3.04999H31.3301V28.95H32.8501V3.04999Z',
+  'M31.33 28.95H29.8V30.48H31.33V28.95Z',
+  'M31.33 1.51999H29.8V3.04999H31.33V1.51999Z',
+  'M29.8002 25.9H28.2802V27.43H29.8002V25.9Z',
+  'M29.8002 4.57001H28.2802V6.09001H29.8002V4.57001Z',
+  'M29.8001 30.48H3.90015V32H29.8001V30.48Z',
+  'M29.8001 0H3.90015V1.52H29.8001V0Z',
+  'M5.42015 25.9H3.90015V27.43H5.42015V25.9Z',
+  'M5.42015 4.57001H3.90015V6.09001H5.42015V4.57001Z',
+  'M3.90013 28.95H2.38013V30.48H3.90013V28.95Z',
+  'M3.90013 1.51999H2.38013V3.04999H3.90013V1.51999Z',
+  'M2.3801 3.04999H0.850098V28.95H2.3801V3.04999Z',
+];
+
+const LEVER_ON = [
+  'M23.7101 6.08999H20.6601V4.56999H19.1401V3.04999H8.47007V4.56999H16.0901V6.08999H8.47007V4.56999H6.95007V9.13999H8.47007V7.61999H19.1401V9.13999H20.6601V10.67H22.1901V12.19H23.7101V13.71H13.0401V12.19H11.5201V24.38H13.0401V15.24H23.7101V24.38H25.2301V7.61999H23.7101V6.08999Z',
+  'M23.71 24.38H13.04V25.9H23.71V24.38Z',
+  'M22.1902 19.81H20.6602V21.33H22.1902V19.81Z',
+  'M22.1902 16.76H20.6602V18.28H22.1902V16.76Z',
+  'M20.6601 21.33H16.0901V22.86H20.6601V21.33Z',
+  'M16.0901 19.81H14.5701V21.33H16.0901V19.81Z',
+  'M16.0901 16.76H14.5701V18.28H16.0901V16.76Z',
+  'M11.5201 10.67H10.0001V12.19H11.5201V10.67Z',
+  'M10.0001 9.14001H8.47009V10.67H10.0001V9.14001Z',
+];
+
+const LEVER_OFF = [
+  'M23.7101 6.09H13.0401V7.62H11.5201V13.71H13.0401V12.19H22.1901V13.71H20.6601V15.24H19.1401V16.76H17.6101V18.28H8.47007V16.76H6.95007V21.33H8.47007V19.81H16.0901V21.33H8.47007V22.86H11.5201V24.38H13.0401V22.86H19.1401V21.33H20.6601V18.28H22.1901V16.76H23.7101V24.38H25.2301V7.62H23.7101V6.09Z',
+  'M23.71 24.38H13.04V25.9H23.71V24.38Z',
+  'M11.5201 13.71H10.0001V15.24H11.5201V13.71Z',
+  'M10.0001 15.24H8.47009V16.76H10.0001V15.24Z',
+];
+
+export type PixelSwitchProps = {
+  on: boolean;
+  /** Rendered height in pixels; the drawing is 33×32. */
+  size?: number;
+};
+
+/**
+ * The switch glyph. The lever takes `--sr-switch-lever` (accent when on);
+ * the bezel is `currentColor`.
+ *
+ * @example
+ * <PixelSwitch on={checked} size={24} />
+ */
+export function PixelSwitch({ on, size = 24 }: PixelSwitchProps) {
+  const lever = on ? LEVER_ON : LEVER_OFF;
+  return (
+    <svg
+      class="sr-switch"
+      width={Math.round((size * 33) / 32)}
+      height={size}
+      viewBox="0 0 33 32"
+      aria-hidden="true"
+      shape-rendering="crispEdges"
+    >
+      <g fill="currentColor">
+        {BEZEL.map((d) => (
+          <path key={d} d={d} />
+        ))}
+      </g>
+      <g class="sr-switch__lever">
+        {lever.map((d) => (
+          <path key={d} d={d} />
+        ))}
+      </g>
+    </svg>
+  );
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@stackray/ui",
+  "version": "0.0.0",
+  "description": "Stackray's windows, panes and controls. Preact inside a Shadow DOM with its own tokens and fonts.",
+  "license": "MIT",
+  "author": "Vedas Dixit (https://vedasdixit.com)",
+  "homepage": "https://github.com/vedas-dixit/Stackray#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vedas-dixit/Stackray.git",
+    "directory": "packages/ui"
+  },
+  "bugs": {
+    "url": "https://github.com/vedas-dixit/Stackray/issues"
+  },
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./tokens.css": "./src/tokens.css",
+    "./fonts.css": "./src/fonts.css",
+    "./components.css": "./src/components.css"
+  },
+  "types": "./src/index.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
+    "@preact/signals": "^2.11.3",
+    "@stackray/core": "workspace:*",
+    "preact": "^11.0.2",
+    "@stackray/renderer": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "vitest": "^5.0.5"
+  }
+}
