@@ -1,0 +1,35 @@
+{
+  "name": "@stackray/core",
+  "version": "0.0.0",
+  "description": "Pure page → snapshot capture and stacking model for Stackray. The only package that reads the DOM.",
+  "license": "MIT",
+  "author": "Vedas Dixit (https://vedasdixit.com)",
+  "homepage": "https://github.com/vedas-dixit/Stackray#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vedas-dixit/Stackray.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/vedas-dixit/Stackray/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./browser": "./src/browser.ts"
+  },
+  "types": "./src/index.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "vitest": "^5.0.5"
+  }
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Broken dropdown — Stackray fixture</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; font: 14px/1.4 system-ui, sans-serif; background: #f3eee6; color: #2b2420; width: 1200px; }
+      #header { position: sticky; top: 0; height: 56px; background: #5b3a2a; color: #f3eee6; z-index: 10; padding: 16px; }
+      main { padding: 24px; display: grid; gap: 24px; grid-template-columns: 320px 320px 320px; }
+      .card { position: relative; background: #fff; border: 1px solid #c9bfb2; padding: 16px; height: 160px; }
+      .card.transformed { transform: translateZ(0); }
+      .dropdown { position: absolute; top: 48px; left: 16px; width: 220px; background: #fff; border: 1px solid #5b3a2a; padding: 8px; z-index: 9999; }
+      .negative { position: relative; z-index: -1; background: #e4d9c8; height: 40px; }
+      .fixed-note { position: fixed; right: 16px; bottom: 16px; background: #2b2420; color: #f3eee6; padding: 8px 12px; }
+      .positive { position: relative; z-index: 1; background: #d9a441; padding: 8px; }
+      .twin { position: relative; z-index: 2; background: #e0953f; height: 32px; margin: 4px 0; }
+      .flex { display: flex; gap: 8px; }
+      .flex-item { z-index: 3; background: #c9bfb2; height: 32px; flex: 1; }
+      .clipper { overflow: hidden; height: 60px; position: relative; background: #fff; border: 1px dashed #8a7f74; }
+      .clipper .cut { position: absolute; top: 80px; height: 20px; width: 100px; background: #d23b2f; }
+      .scroller { overflow: auto; height: 60px; position: relative; background: #fff; border: 1px solid #8a7f74; }
+      .scroller .far { margin-top: 200px; height: 20px; width: 100px; background: #5c6b3a; }
+      .ghost-overlay { position: fixed; inset: 0; opacity: 0; background: #000; z-index: 50; }
+      .hashed-x7f9q2 { height: 24px; background: #efe9df; }
+      dialog { border: 1px solid #5b3a2a; padding: 16px; }
+    </style>
+  </head>
+  <body>
+    <header id="header">Sticky header (z 10)</header>
+    <main>
+      <section class="card transformed">
+        <button type="button" data-testid="menu-button">Menu</button>
+        <div class="dropdown" role="menu">Dropdown (z 9999) trapped by the transformed card</div>
+      </section>
+      <section class="card">
+        <div class="negative">Negative z sits behind its parent's background</div>
+        <div class="positive">Positive z</div>
+        <div class="twin">Twin A (z 2)</div>
+        <div class="twin">Twin B (z 2, later in DOM, paints above A)</div>
+      </section>
+      <section class="card">
+        <div class="flex">
+          <div class="flex-item">Flex item z 3</div>
+          <div class="flex-item">Flex item z 3</div>
+        </div>
+        <div class="clipper"><div class="cut">Cut off</div></div>
+        <div class="scroller"><div class="far">Scrolled out</div></div>
+        <section class="hashed-x7f9q2 css-1a2b3c" aria-label="Hashed classes only">Hashed classes</section>
+      </section>
+    </main>
+    <div class="ghost-overlay" aria-hidden="true"></div>
+    <div class="fixed-note">Fixed note (no z)</div>
+    <dialog id="modal">Open dialog lives in the top layer</dialog>
+    <sr-widget></sr-widget>
+    <script>
+      document.getElementById('modal').showModal();
+      customElements.define(
+        'sr-widget',
+        class extends HTMLElement {
+          connectedCallback() {
+            const root = this.attachShadow({ mode: 'open' });
+            root.innerHTML = '<div class="inner" style="position:relative;z-index:5;height:20px;background:#8b2c3b"></div>';
+          }
+        },
+      );
+    </script>
+  </body>
+</html>
