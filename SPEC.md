@@ -205,7 +205,7 @@ stackray/
     site/        landing page with the embedded demo
   fixtures/      broken-dropdown.html + its snapshot; youtube.json, figma.json, github.json when captured
   scripts/       capture-fixture.ts (Playwright: open URL, run capture, save JSON)
-  docs/          architecture.md · motion.md · ui-preview*.png · gifs/ and the author card for the README · archived brief
+  docs/          architecture.md · motion.md · ui-preview*.png · logo.png, gifs/, screenshots and the author card for the README · archived brief
 ```
 
 | Command         | Does                                                         |

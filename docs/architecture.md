@@ -47,7 +47,7 @@ stackray/
     viewer/      a web page that loads a snapshot and shows it. The dev loop and test bed.
     site/        the landing page. A placeholder for now.
   fixtures/      saved snapshots and the HTML pages they came from.
-  scripts/       small tools: capture fixtures, copy fonts, make icons.
+  scripts/       small tools: capture fixtures, copy fonts.
   docs/          this file, the motion spec, screenshots, the original brief.
 ```
 

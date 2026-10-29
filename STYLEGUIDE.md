@@ -51,18 +51,18 @@ Numbers use a thin space as the thousands separator (`2 607 layers`). Labels are
 
 Hand‑drawn, not geometric. Drawn as SVG paths at 16×16 with a 1.5px stroke, round caps and joins, `currentColor`, no fills except the ghost's eyes. Corners overshoot by about half a pixel the way a pen does, and long lines bow slightly. Scale to 24 for the extension icon.
 
-| Icon       | Used for                                                             |
-| ---------- | -------------------------------------------------------------------- |
-| `stack`    | The extension icon: three tilted planes, the top one lifted          |
-| `layers`   | Tools window title, color‑mode "depth"                               |
-| `ghost`    | Ghost filter and ghost legend entry                                  |
-| `scissors` | Clipped elements                                                     |
-| `ladder`   | The z‑index ladder                                                   |
-| `chevron`  | Pane tabs (rotates for right and bottom)                             |
-| `search`   | Selector search                                                      |
-| `keys`     | The `?` key list                                                     |
-| `orbit`    | Tour mode                                                            |
-| `close`    | Only in the EmptyState and the key list; the window uses the red dot |
+| Icon       | Used for                                                                                                                                 |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `stack`    | Empty states. The extension icon itself is the painted tile in `docs/logo.png`, which the toolbar, the favicons and the README all share |
+| `layers`   | Tools window title, color‑mode "depth"                                                                                                   |
+| `ghost`    | Ghost filter and ghost legend entry                                                                                                      |
+| `scissors` | Clipped elements                                                                                                                         |
+| `ladder`   | The z‑index ladder                                                                                                                       |
+| `chevron`  | Pane tabs (rotates for right and bottom)                                                                                                 |
+| `search`   | Selector search                                                                                                                          |
+| `keys`     | The `?` key list                                                                                                                         |
+| `orbit`    | Tour mode                                                                                                                                |
+| `close`    | Only in the EmptyState and the key list; the window uses the red dot                                                                     |
 
 Two pixel‑art pieces are allowed: the 8×8 stack glyph in the viewport title bar, the way the apple sits on vedasdixit.com, and the rocker switch used for every toggle, borrowed from the same site's toolkit card. There are no others.
 
