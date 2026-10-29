@@ -61,7 +61,7 @@ export function StackrayApp(props: StackrayAppProps) {
   const reduced = prefersReducedMotion();
   const [selected, setSelected] = useState<number | null>(null);
   const [mode, setMode] = useState<ColorMode>('depth');
-  const [textured, setTextured] = useState(false);
+  const [textured, setTextured] = useState(true);
   const [staircase, setStaircase] = useState(false);
   const [filters, setFilters] = useState<FilterState>(defaultFilters);
   const [explode, setExplode] = useState(DEFAULT_EXPLODE);
