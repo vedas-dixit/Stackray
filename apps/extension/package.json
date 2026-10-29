@@ -15,6 +15,7 @@
     "postinstall": "wxt prepare",
     "fonts": "tsx ../../scripts/copy-fonts.ts",
     "predev": "pnpm fonts",
+    "pretypecheck": "pnpm fonts",
     "prebuild": "pnpm fonts",
     "prebuild:firefox": "pnpm fonts"
   },

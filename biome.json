@@ -6,7 +6,15 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!**/.wxt", "!**/.output", "!**/dist", "!fixtures/*.json", "!docs/*.png"]
+    "includes": [
+      "**",
+      "!**/.wxt",
+      "!**/.output",
+      "!**/dist",
+      "!fixtures/*.json",
+      "!docs/*.png",
+      "!docs/*.svg"
+    ]
   },
   "formatter": {
     "enabled": true,
