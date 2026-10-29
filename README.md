@@ -136,7 +136,7 @@ pnpm preview:ui   # Playwright: component screenshots and the live frame-time te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/author-dark.svg">
-  <img src="docs/author.svg" width="100%" alt="A retro-Mac window in Stackray's style with a black and white photo of Vedas sketching on an iPad on a railway platform at night. Hi, I’m Vedas. I’m a frontend engineer who likes making things for the people who use them. Stackray started as a tool I wanted for my own z-index bugs, and its look is borrowed from my site and my blog.">
+  <img src="docs/author.svg" width="100%" alt="A retro-Mac window in Stackray's style with a black and white photo of Vedas sketching on an iPad on a railway platform at night, with drawn flowers growing out of the iPad.">
 </picture>
 
 <p align="center">
