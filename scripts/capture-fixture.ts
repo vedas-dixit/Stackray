@@ -62,7 +62,9 @@ async function main(): Promise<void> {
     for (const fixture of fixtures) {
       const page = await browser.newPage({ viewport: fixture.viewport });
       await page.goto(urlFor(fixture), { waitUntil: 'load' });
-      await page.addScriptTag({ content: code });
+      // Evaluated through CDP rather than a <script> tag, so a remote page's
+      // CSP or Trusted Types policy cannot block the capture.
+      await page.evaluate(code);
       const result = (await page.evaluate('globalThis.__stackray.capture()')) as
         | { ok: true; value: { meta: { url: string; page: { w: number; h: number } } } }
         | { ok: false; error: { message: string } };

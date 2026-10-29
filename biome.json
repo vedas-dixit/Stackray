@@ -13,7 +13,8 @@
       "!**/dist",
       "!fixtures/*.json",
       "!docs/*.png",
-      "!docs/*.svg"
+      "!docs/*.svg",
+      "!pnpm-lock.yaml"
     ]
   },
   "formatter": {
