@@ -13,10 +13,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/vedas-dixit/Stackray/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/vedas-dixit/Stackray/actions/workflows/ci.yml/badge.svg"></a>
   <img alt="MIT license" src="https://img.shields.io/badge/license-MIT-5b3a2a?style=flat-square">
   <img alt="Chrome, load unpacked" src="https://img.shields.io/badge/chrome-load%20unpacked-5b3a2a?style=flat-square">
-  <img alt="Zero network requests" src="https://img.shields.io/badge/network%20requests-0-5b3a2a?style=flat-square">
 </p>
 
 ![Stackray lifting a web page into layers](docs/gifs/lift.gif)
@@ -50,7 +48,7 @@ It's an experiment, and there's still plenty I'd like to improve. If it looks in
 
 A dropdown can have `z-index: 9999` and still end up behind a header. In this example, its card has a `transform`, which creates a stacking context. The dropdown can't escape that context just by getting a bigger number.
 
-Press `4` to switch to Problems mode,stackray marks the issue in red; hover a layer for a quick explanation, or click it to inspect it.
+Press `4` to switch to Problems mode. Stackray marks the issue in red; hover a layer for a quick explanation, or click it to inspect it.
 
 Invisible elements are shown in red too. They're sometimes the reason a click never reaches the thing you meant to click. Press `G` to hide them.
 

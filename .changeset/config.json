@@ -7,5 +7,9 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@stackray/viewer", "@stackray/site"]
+  "ignore": ["@stackray/viewer", "@stackray/site"],
+  "privatePackages": {
+    "version": true,
+    "tag": false
+  }
 }

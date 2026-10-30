@@ -83,7 +83,7 @@ Stackray is a browser extension that lifts any web page into a 3D stack of its l
 
 **See the UI without a page.** `pnpm dev` opens the viewer; `/?fixture=broken-dropdown` renders the fixture with the real renderer and `/#preview` shows every component in every state. `pnpm preview:ui` runs the Playwright suite, which refreshes the `docs/ui-preview*.png` screenshots and asserts the live frame budget.
 
-**Cut a release.** `pnpm changeset` to describe the change, merge, `pnpm changeset version` to bump versions, then `pnpm release` (builds everything, publishes, tags). Store zips come from `pnpm --filter @stackray/extension zip`.
+**Cut a release.** `pnpm changeset` to describe the change, merge, `pnpm changeset version` to bump versions, then `pnpm release` (builds everything, publishes, tags). Store zips come from `pnpm --filter @stackray/extension zip`. The store listing copy and the dashboard checklist are in [docs/store-listing.md](docs/store-listing.md); the listing links to [PRIVACY.md](PRIVACY.md), which must stay true.
 
 ## Commits
 

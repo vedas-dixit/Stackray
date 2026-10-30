@@ -1,7 +1,7 @@
 {
   "name": "@stackray/extension",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Stackray browser extension, built with WXT. Used in Chrome; the Firefox and Edge builds are untested.",
   "license": "MIT",
   "type": "module",
@@ -11,6 +11,7 @@
     "build": "wxt build",
     "build:firefox": "wxt build -b firefox",
     "zip": "wxt zip && wxt zip -b firefox",
+    "prezip": "pnpm fonts",
     "typecheck": "wxt prepare && tsc -p tsconfig.json",
     "postinstall": "wxt prepare",
     "fonts": "tsx ../../scripts/copy-fonts.ts",
