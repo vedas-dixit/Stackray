@@ -64,15 +64,13 @@ This is an early release. Textured mode covers the first six screens of a long p
 
 **Store icon**: `apps/extension/public/icon/128.png`, 128 × 128 PNG.
 
-**Screenshots**: one to five, exactly 1280 × 800 or 640 × 400, JPEG or 24-bit PNG with no transparency, no padding or rounded corners. GIFs are not accepted. None of the images in `docs/` are that size yet, so these need a crop:
+**Screenshots**: one to five, exactly 1280 × 800 or 640 × 400, JPEG or 24-bit PNG with no transparency, no padding or rounded corners. GIFs are not accepted. The current set is composed locally by `store-assets/render.ts` (kept out of git) from the background, the logo, the youtube.com screenshots and captures of the viewer:
 
-| Shot                           | Source to crop from                            |
-| ------------------------------ | ---------------------------------------------- |
-| A page lifted, depth mode      | `docs/youtube-depth.jpg` (1600 × 970)          |
-| Problems mode, dropdown in red | the frame behind `docs/gifs/why-behind.gif`    |
-| Textured planes from above     | `docs/youtube-top.jpg` (1600 × 979)            |
-| Staircase view                 | the frame behind `docs/gifs/staircase.gif`     |
-| Search and the z-index ladder  | the frame behind `docs/gifs/search-ladder.gif` |
+1. A page lifted into layers, with the one-line pitch
+2. Textured planes, youtube.com from above
+3. Problems mode on the trapped dropdown, with its stacking chain
+4. The five color modes side by side
+5. The z-index ladder
 
 **Small promo tile**: 440 × 280 JPEG or PNG. Marked optional, but it is the image on the category and search pages, so make one: logo on the cream background with the one-line summary. **Marquee tile**: 1400 × 560, only used if Google features the item; skip for now.
 
