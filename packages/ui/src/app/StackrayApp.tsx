@@ -62,7 +62,7 @@ export function StackrayApp(props: StackrayAppProps) {
   const [selected, setSelected] = useState<number | null>(null);
   const [mode, setMode] = useState<ColorMode>('depth');
   const [textured, setTextured] = useState(true);
-  const [staircase, setStaircase] = useState(false);
+  const [staircase, setStaircase] = useState(true);
   const [filters, setFilters] = useState<FilterState>(defaultFilters);
   const [explode, setExplode] = useState(DEFAULT_EXPLODE);
   const [depthCutoff, setDepthCutoff] = useState<number | null>(null);

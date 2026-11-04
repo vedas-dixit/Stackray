@@ -68,7 +68,7 @@ Invisible elements are shown in red too. They're sometimes the reason a click ne
   <tr>
     <td width="50%" valign="top">
       <img src="docs/gifs/staircase.gif" width="100%" alt="Layers arranged like a staircase">
-      <p><code>S</code> puts each layer on its own step in paint order. The explode slider takes the view from a flat page to a little architectural model.</p>
+      <p>Layers start on the staircase, each on its own step in paint order; <code>S</code> switches back to overlap levels. The explode slider takes the view from a flat page to a little architectural model.</p>
     </td>
     <td width="50%" valign="top">
       <img src="docs/gifs/search-ladder.gif" width="100%" alt="Searching layers and viewing the z-index ladder">
@@ -132,7 +132,7 @@ I haven't tested that build yet.
 | `1`–`5`        | Switch color modes                  |
 | `G`            | Show or hide invisible layers       |
 | `T`            | Toggle textured planes              |
-| `S`            | Switch to staircase view            |
+| `S`            | Toggle the staircase view           |
 | `L`            | Open the z-index ladder             |
 | `/`            | Search the layers                   |
 | `?`            | Show the shortcut list              |
