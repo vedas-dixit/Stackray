@@ -47,7 +47,7 @@ What you can do
 - Switch color modes with 1 to 5: depth, stacking contexts, z-index heat, problems and plain. Each mode has a legend.
 - Problems mode marks the usual suspects in red: elements trapped in a stacking context, so a bigger z-index does nothing, and invisible elements that may be catching your clicks. Elements cut off by an overflow: hidden ancestor get a red dashed edge.
 - T gives leaf layers their own pixels from a screenshot of the page.
-- S arranges the layers as a staircase in paint order.
+- Layers start as a staircase, one step per layer in paint order. S switches to overlap levels instead.
 - L opens the z-index ladder, the elements competing directly under the root stacking context.
 - / searches the layer tree. ? lists every shortcut.
 
