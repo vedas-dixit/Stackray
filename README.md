@@ -9,12 +9,12 @@
 </p>
 
 <p align="center">
-  <a href="#try-it-locally">Try it locally</a>&ensp;·&ensp;<a href="#have-a-look">Have a look</a>&ensp;·&ensp;<a href="#keyboard-shortcuts">Shortcuts</a>&ensp;·&ensp;<a href="#whats-working-and-whats-not">Status</a>&ensp;·&ensp;<a href="CONTRIBUTING.md">Contributing</a>
+  <a href="#install">Install</a>&ensp;·&ensp;<a href="#have-a-look">Have a look</a>&ensp;·&ensp;<a href="#keyboard-shortcuts">Shortcuts</a>&ensp;·&ensp;<a href="#whats-working-and-whats-not">Status</a>&ensp;·&ensp;<a href="CONTRIBUTING.md">Contributing</a>
 </p>
 
 <p align="center">
   <img alt="MIT license" src="https://img.shields.io/badge/license-MIT-5b3a2a?style=flat-square">
-  <img alt="Chrome, load unpacked" src="https://img.shields.io/badge/chrome-load%20unpacked-5b3a2a?style=flat-square">
+  <a href="https://chromewebstore.google.com/detail/stackray/pjfbeffpjkepgiehmigffncbenbiknah"><img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/v/pjfbeffpjkepgiehmigffncbenbiknah?style=flat-square&label=chrome%20web%20store&color=5b3a2a"></a>
 </p>
 
 ![Stackray lifting a web page into layers](docs/gifs/lift.gif)
@@ -84,11 +84,15 @@ A few other details:
 - Modal dialogs, open popovers and fullscreen elements are shown in the browser's top layer.
 - You can orbit, pan, zoom, search, and select layers. Press `?` to see the keyboard shortcuts.
 
-## Try it locally
+## Install
 
-Stackray is early. For now, the extension is set up to build and load locally in Chrome; it isn't published in a browser store.
+Stackray is on the [Chrome Web Store](https://chromewebstore.google.com/detail/stackray/pjfbeffpjkepgiehmigffncbenbiknah). Add it, open any page, and click the Stackray icon or press `Alt+Shift+S`. Press the shortcut again or hit `Esc` to close it and get the page back.
 
-You'll need Node.js 22 or newer and pnpm 10.
+Firefox and Edge builds aren't published yet.
+
+## Build it yourself
+
+If you want to hack on it, or just prefer to run your own build, you'll need Node.js 22 or newer and pnpm 10.
 
 ```sh
 git clone https://github.com/vedas-dixit/Stackray.git
@@ -104,7 +108,7 @@ Then:
 3. Click **Load unpacked** and select `apps/extension/.output/chrome-mv3`.
 4. Open a page and click the Stackray icon, or press `Alt+Shift+S`.
 
-Press the shortcut again or hit `Esc` to close Stackray and return to the page. After rebuilding, use the reload button on the Stackray card in Chrome's extensions page.
+After rebuilding, use the reload button on the Stackray card in Chrome's extensions page.
 
 You can also run the viewer without loading the extension:
 
