@@ -116,6 +116,4 @@ Click **Submit for review**. Leave "publish automatically after review" on. Revi
 
 ## After it is live
 
-- Replace the "chrome · load unpacked" badge in the README with a store badge linking to the listing, and rewrite the first lines of "Try it locally" to lead with the store install.
-- Add the store link to the launch posts in SPEC.md §12.
-- Firefox Add-ons and Edge Add-ons come later (SPEC.md §5, v1.5). The Firefox zip from the same command is untested.
+The listing is at <https://chromewebstore.google.com/detail/stackray/pjfbeffpjkepgiehmigffncbenbiknah>. The README links to it from the badge and the Install section. Firefox Add-ons and Edge Add-ons come later (SPEC.md §5, v1.5); the Firefox zip from the same command is untested.
