@@ -86,7 +86,7 @@ A few other details:
 
 ## Try it locally
 
-Stackray is early. For now, the extension is set up to build and load locally in Chrome; it isn't published in a browser store.
+Stackray is early. For now, the extension is set up to build and load locally in Chrome or Firefox; it isn't published in a browser store.
 
 You'll need Node.js 22 or newer and pnpm 10.
 
@@ -106,6 +106,14 @@ Then:
 
 Press the shortcut again or hit `Esc` to close Stackray and return to the page. After rebuilding, use the reload button on the Stackray card in Chrome's extensions page.
 
+For Firefox, build the Firefox version instead:
+
+```sh
+pnpm --filter @stackray/extension build:firefox
+```
+
+Then open `about:debugging#/runtime/this-firefox`, click **Load Temporary Add-on** and pick `apps/extension/.output/firefox-mv3/manifest.json`. The add-on stays until Firefox restarts, and the **Reload** button on that page picks up a rebuild. `pnpm --filter @stackray/extension dev:firefox` does the same with a reload on every change.
+
 You can also run the viewer without loading the extension:
 
 ```sh
@@ -113,14 +121,6 @@ pnpm dev
 ```
 
 Open `/?fixture=broken-dropdown` to see the example page, or load a snapshot JSON of your own. The GIFs above were recorded from the viewer.
-
-WXT can build a Firefox version too:
-
-```sh
-pnpm --filter @stackray/extension build:firefox
-```
-
-I haven't tested that build yet.
 
 ## Keyboard shortcuts
 
@@ -154,7 +154,7 @@ There are still gaps:
 - Isolate-subtree currently filters the tree, but not the 3D view.
 - Share-card export, tour and compare mode are still on the list.
 - The yellow and green window buttons are visual for now and don't do anything.
-- Firefox and Edge builds haven't been tested.
+- The Firefox build is new and has had far less use than the Chrome one. The Edge build hasn't been tested.
 
 If something doesn't work on a particular site, that's useful to know too. An issue with the page URL, browser version and steps to reproduce is a good place to start. Please avoid posting a snapshot publicly without checking it first; snapshots can contain page details.
 
