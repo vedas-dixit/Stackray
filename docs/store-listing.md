@@ -116,41 +116,4 @@ Click **Submit for review**. Leave "publish automatically after review" on. Revi
 
 ## After it is live
 
-- Replace the "chrome · load unpacked" badge in the README with a store badge linking to the listing, and rewrite the first lines of "Try it locally" to lead with the store install.
-- Add the store link to the launch posts in SPEC.md §12.
-- Edge Add-ons comes later (SPEC.md §5, v1.5). Firefox has its own section below.
-
-## Firefox Add-ons
-
-The same build, submitted at <https://addons.mozilla.org/developers/>. Sign in with a Mozilla account; there is no developer fee. The manifest already carries what Mozilla asks of new extensions: an add-on id and a declaration that no data is collected. Both sit in [apps/extension/wxt.config.ts](../apps/extension/wxt.config.ts) and only go into the Firefox build. The id `stackray@vedasdixit.com` is permanent once the first version is signed.
-
-### Build
-
-```sh
-pnpm --filter @stackray/extension zip
-```
-
-Two files land next to the Chrome zip: `stackrayextension-<version>-firefox.zip` is the upload, and `stackrayextension-<version>-sources.zip` is the source code Mozilla asks for because the upload is bundled and minified. The sources zip holds the whole workspace without images, fixtures and tests. A reviewer rebuilds it and diffs the result against the upload, so check that first: unzip the sources into an empty folder, run `pnpm install --frozen-lockfile` and `pnpm --filter @stackray/extension build:firefox` there, and `diff -r` its `apps/extension/.output/firefox-mv3` against the one in the repo. There must be no differences.
-
-`npx web-ext lint --source-dir apps/extension/.output/firefox-mv3` runs the checks the upload runs. Two warnings are expected: `strict_min_version` is 140, lower than the 142 that Firefox for Android would need (the add-on is desktop only), and an `innerHTML` assignment inside Preact, which Stackray does not use.
-
-### Submit
-
-1. **Submit a New Add-on**, then **On this site**. Drop the Firefox zip. The validator should report no errors.
-2. Compatibility: Firefox, not Firefox for Android.
-3. **Do you need to submit source code?** Yes. Upload the sources zip.
-4. Listing: the name and summary come from the manifest. The description, category (Web Development), support email and site, homepage, licence (MIT), privacy policy link, icon and screenshots are the same as for Chrome, above.
-5. Notes to reviewer:
-
-   ```text
-   Stackray makes no network requests and collects no data (data_collection_permissions: none). Three.js, Preact and the fonts ship inside the package.
-
-   The upload is built from the sources zip. Requirements: Node 22 or newer and pnpm 10.28.1, pinned in package.json (corepack enable selects it). From the unzipped root:
-
-     pnpm install --frozen-lockfile
-     pnpm --filter @stackray/extension build:firefox
-
-   The output is apps/extension/.output/firefox-mv3 and matches the upload byte for byte. The innerHTML warning comes from Preact's dangerouslySetInnerHTML handling, which Stackray does not use.
-   ```
-
-6. **Submit Version**. The result comes by email to the Mozilla account. Each later upload needs a higher version, bumped through changesets like the Chrome one.
+The listing is at <https://chromewebstore.google.com/detail/stackray/pjfbeffpjkepgiehmigffncbenbiknah>. The README links to it from the badge and the Install section. Firefox Add-ons and Edge Add-ons come later (SPEC.md §5, v1.5); the Firefox zip from the same command is untested.
