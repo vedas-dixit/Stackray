@@ -2,7 +2,7 @@
   "name": "@stackray/extension",
   "private": true,
   "version": "0.1.0",
-  "description": "Stackray browser extension, built with WXT. Used in Chrome; the Firefox and Edge builds are untested.",
+  "description": "Stackray browser extension, built with WXT, for Chrome and Firefox. The Edge build is untested.",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -29,8 +29,9 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.6",
+    "tsx": "^4.23.15",
     "typescript": "^5.9.0",
-    "wxt": "^0.21.5",
-    "tsx": "^4.23.15"
+    "web-ext": "^10.8.0",
+    "wxt": "^0.21.5"
   }
 }

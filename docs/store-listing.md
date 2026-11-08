@@ -1,6 +1,6 @@
-# Chrome Web Store listing
+# Store listings
 
-The copy and the settings for Stackray's Chrome Web Store listing, in the order the dashboard asks for them. Paste from here rather than retyping. When the manifest in [apps/extension/wxt.config.ts](../apps/extension/wxt.config.ts) or [PRIVACY.md](../PRIVACY.md) changes, change this file too; the review compares all three.
+The copy and the settings for Stackray's Chrome Web Store listing, in the order the dashboard asks for them, and the shorter Firefox Add-ons checklist at the end. Paste from here rather than retyping. When the manifest in [apps/extension/wxt.config.ts](../apps/extension/wxt.config.ts) or [PRIVACY.md](../PRIVACY.md) changes, change this file too; the review compares all three.
 
 ## Account settings, once
 
