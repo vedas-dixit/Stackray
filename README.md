@@ -18,7 +18,8 @@
   <a href="https://addons.mozilla.org/en-US/firefox/addon/stackray/"><img alt="Firefox Add-ons" src="https://img.shields.io/amo/v/stackray?style=flat-square&label=firefox%20add-ons&color=5b3a2a"></a>
 </p>
 
-![Stackray lifting a web page into layers](docs/gifs/lift.gif)
+
+https://github.com/user-attachments/assets/44de52cf-1fca-4451-8f22-7b2f4d34caad
 
 I miss Firefox Tilt. It let you look at a web page as a 3D version of its DOM, and it was just a fun thing to play with. Stackray started from that idea.
 
