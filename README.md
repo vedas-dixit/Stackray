@@ -15,6 +15,7 @@
 <p align="center">
   <img alt="MIT license" src="https://img.shields.io/badge/license-MIT-5b3a2a?style=flat-square">
   <a href="https://chromewebstore.google.com/detail/stackray/pjfbeffpjkepgiehmigffncbenbiknah"><img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/v/pjfbeffpjkepgiehmigffncbenbiknah?style=flat-square&label=chrome%20web%20store&color=5b3a2a"></a>
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/stackray/"><img alt="Firefox Add-ons" src="https://img.shields.io/amo/v/stackray?style=flat-square&label=firefox%20add-ons&color=5b3a2a"></a>
 </p>
 
 ![Stackray lifting a web page into layers](docs/gifs/lift.gif)
@@ -86,9 +87,9 @@ A few other details:
 
 ## Install
 
-Stackray is on the [Chrome Web Store](https://chromewebstore.google.com/detail/stackray/pjfbeffpjkepgiehmigffncbenbiknah). Add it, open any page, and click the Stackray icon or press `Alt+Shift+S`. Press the shortcut again or hit `Esc` to close it and get the page back.
+Stackray is on the [Chrome Web Store](https://chromewebstore.google.com/detail/stackray/pjfbeffpjkepgiehmigffncbenbiknah) and [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/stackray/). Add it, open any page, and click the Stackray icon or press `Alt+Shift+S`. Press the shortcut again or hit `Esc` to close it and get the page back. In Firefox, if the icon isn't on the toolbar, it's under the extensions button.
 
-Firefox and Edge builds aren't published yet.
+The Edge build isn't published yet.
 
 ## Build it yourself
 
@@ -110,7 +111,7 @@ Then:
 
 After rebuilding, use the reload button on the Stackray card in Chrome's extensions page.
 
-For Firefox, build the Firefox version instead:
+To run a local build in Firefox, build the Firefox version instead:
 
 ```sh
 pnpm --filter @stackray/extension build:firefox
